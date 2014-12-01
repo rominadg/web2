@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DG Romina Rota</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/vendor/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/animatescroll.js"></script>	
+    <script src="js/jquery.quicksand.js"></script>	
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery-css-transform.js"></script>
+	<script src="js/jquery-animate-css-rotate-scale.js"></script>
+  </head>
+  <body>
+  <div class="demo">
+    <p id="load-webbies">
+		<a href="http://www.happywebbies.com/">Webbies</a>: 
+		<a class="button" href="./ajax/brits.html">Brits</a>
+		<a class="button" href="ajax-developers.html">Developers</a>
+		<a class="button" href="ajax-westerners.html">Westerners</a>
+		<a class="button" href="ajax-designers.html">Designers</a>
+		<a class="button" href="ajax-legends.html">Legends</a>
+	</p>
+	
+<ul class="webbies">
+    <li data-id="ab"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="ac"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="db"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="dc"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="dr"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="ds"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="dbw"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="em"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="jz"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="jk"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="jh"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="js"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="si"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+    <li data-id="vd"><img width="110" height="110" src="./img/desafio_icono.png"></li>
+  </ul>
+</div>
+	
+	<script>
+	$(document).ready(function(){
+		$(function() {
+		  $('#load-webbies a.button').click(function(e) {
+			$.get( $(this).attr('href'), function(data) {
+			  $('.webbies').quicksand( $(data).find('li'),
+				{
+				  adjustHeight: 'dynamic',
+				  attribute: function(v) {
+					return $(v).find('img').attr('src');
+				  }
+				});
+			});	
+		  e.preventDefault();	
+		  });
+		});
+	});
+	</script>
+  </body>

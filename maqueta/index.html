@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DG Romina Rota</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>    
+  <h1 class="hide">dgrr</h1>
+	<div class="row fdopag">
+		<img class="logoimg" src="./img/logo.png" alt="pseudo">
+			<div class="large-3 columns imgprueba">
+				<div class="zoom">
+					<div class="back-hover unobk"></div>
+					<img src="./img/01.jpg" alt="Perfil">
+				</div>
+				<div class="item-section">
+					<h2>¿QUIÉN SOY?</h2>
+					<hr>
+					<p><a class="masinfo quiensoy" href="#"></a></p>
+				</div>
+			</div>
+			<div class="large-3 columns imgprueba">
+				<div class="zoom">
+					<div class="back-hover dosbk"></div>
+					<img src="./img/02.jpg" alt="Servicios">
+				</div>	
+				<div class="item-section">
+					<h2>¿QUÉ HAGO?</h2>
+					<hr>
+					<p><a class="masinfo quehago" href="#"></a></p>
+				</div>				
+			</div>
+			<div class="large-3 columns imgprueba">
+				<div class="zoom">
+					<div class="back-hover tresbk"></div>
+					<img src="./img/03.jpg" alt="Portfolio">
+				</div>
+				<div class="item-section">
+					<h2>PORTFOLIO</h2>
+					<hr>
+					<p><a class="masinfo portfolio" href="#"></a></p>
+				</div>	
+			</div>
+			<div class="large-3 columns imgprueba">
+				<div class="zoom">
+					<div class="back-hover cuatrobk"></div>
+					<img src="./img/04.jpg" alt="Contacto">
+				</div>	
+				<div class="item-section">
+					<h2>CONTACTO</h2>
+					<hr>
+					<p><a class="masinfo contacto" href="#"></a></p>
+				</div>			
+			</div>
+		</div>
+		 
+	
+		 
+
+    
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+	<script>
+		function resizeImg() {
+            $('.imgprueba img').height($(window).height())
+        }
+        $(document).foundation();
+        $(document).ready(function(){
+            resizeImg();
+            $(window).resize(function(){
+                resizeImg();
+            });
+        });
+	</script>
+	<script>
+    $(document).ready(function(){
+        $('.item-section').hover(function(e){
+            console.log("entro hijo"); 
+            var elemZoom = $(this).siblings('.zoom');
+            $(elemZoom).css("-webkit-transform", "scale(1.2, 1.2)");
+            $(elemZoom).find('.back-hover')
+                .css("background-color","rgba(102,153,51,0.5)");
+            e.stopPropagation();
+        }, function(e){
+            console.log("salio hijo"); 
+            var elemZoom = $(this).siblings('.zoom');
+            $(elemZoom).css("-webkit-transform", "scale(1, 1)");
+            $(elemZoom).find('.back-hover')
+                .css("background-color","rgba(252,252,252,0.0)");
+            e.stopPropagation();
+        });
+
+        $('.zoom').hover(function(e){
+            console.log("entro"); 
+            var elemZoom = $(this);
+            $(elemZoom).css("-webkit-transform", "scale(1.2, 1.2)");
+            $(elemZoom).find('.back-hover')
+                .css("background-color","rgba(102,153,51,0.5)");
+            e.stopPropagation();
+        }, function(e){
+            console.log("salio"); 
+            var elemZoom = $(this);
+            $(elemZoom).css("-webkit-transform", "scale(1, 1)");
+            $(elemZoom).find('.back-hover')
+                .css("background-color","rgba(252,252,252,0.0)");
+            e.stopPropagation();
+        });
+     });
+	</script>
+  </body>
+</html>
