@@ -104,6 +104,15 @@
                  .orbit-container p {
                     height: 100px;
                  }
+				 .orbit-container .orbit-prev, 
+				 .orbit-container .orbit-next {
+					opacity: 0.2;
+				 }
+				 .orbit-container .orbit-prev:hover, 
+				 .orbit-container .orbit-next:hover {
+					opacity: 1;
+					background-color: rgba(0, 0, 0, 0);
+				 }
             </style>
             <div class="row imgfdoadjust">
                 <ul class="example-orbit" data-orbit data-options="animation:slide;
@@ -171,26 +180,68 @@
 						<a href="./ctrabajoparte" class="page">ver +</a>
 					</div>
 				</li>
-				<li data-id="id-2" data-type="grafica">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-2" data-type="grafica">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo02</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
-				<li data-id="id-3" data-type="web">
-						<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-3" data-type="web">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo03</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
-				<li data-id="id-4" data-type="ident">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-4" data-type="ident">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo04</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>						
-				<li data-id="id-5" data-type="ident">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-5" data-type="ident">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo05</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
-				<li data-id="id-6" data-type="web">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-6" data-type="web">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo06</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
-				<li data-id="id-7" data-type="dept">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-7" data-type="dept">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo05</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
-				<li data-id="id-8" data-type="grafica">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-8" data-type="grafica">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo06</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
 			</ul>
 		</section>
@@ -218,10 +269,10 @@
 	</section>
 <!-- contenido de seccion datos de contacto -->
 	<section class="row fdopag fdodatos">
-		<div class="large-12 columns">
+		<div class="large-12 columns datosdgrr">
 			<img src="./img/logoblanco.png" alt="logo">
-			<p class="datoscontacto pdng">cel. 0341 153 455236</p>
-			<p class="datoscontacto">contacto@dgrominarota.com</p>
+			<p class="pdng">cel. 0341 153 455236</p>
+			<p>contacto@dgrominarota.com</p>
 			<p><a class="redpie" href="#"><img src="./img/fcbk+fdo.png" alt="facebook"></a></p>
 		</div>
 	</section>
@@ -302,37 +353,7 @@
 </script>	
 <div id="pageslide" style="display:none"></div>
 <style>
-<script>
-    $(document).ready(function(){
-        $('.nombre').hover(function(e){
-            var elemcolor = $(this).siblings('.imgtrabj');
-            $(elemcolor).css("-webkit-filter", "grayscale(100%)");
-            $(elemcolor).find('.nombre')
-                .css("opacity","0");
-            e.stopPropagation();
-        }, function(e){
-            var elemcolor = $(this).siblings('.imgtrabj');
-            $(elemcolor).css("-webkit-filter", "grayscale(0%)");
-            $(elemcolor).find('.nombre')
-                .css("opacity","1");
-            e.stopPropagation();
-        });
 
-    $('.nombre').hover(function(e){
-            var elemcolor = $(this);
-            $(elemcolor).css("-webkit-filter", "grayscale(100%)");
-            $(elemcolor).find('.imgtrabj')
-              .css("opacity","0");
-            e.stopPropagation();
-        }, function(e){
-            var elemcolor = $(this);
-            $(elemcolor).css("-webkit-filter", "grayscale(0%)");
-            $(elemcolor).find('.imgtrabj')
-                .css("opacity","1");
-            e.stopPropagation();
-        });
-     });
-	</script>
 /* #Page Slide
 ================================================== */
 #pageslide {
