@@ -170,6 +170,7 @@ li.buttonred:hover {
 	width: 50px;
 	height: 50px;
 	margin: 0 auto; 
+	color: white; 
 }
 .quiensoy {
 	background: url('../img/isomasinfo.png') 0 0;
@@ -327,20 +328,14 @@ section {
 	-webkit-animation-delay: 20ms;
 	animation-delay: 20ms;
 }
-.animation_jump_2 {
+/*.animation_jump_2 {
 	-webkit-animation: animation_jump_out_small 1000ms linear both;
 	animation: animation_jump_out_small 1000ms linear both;
 	-webkit-animation-delay: 20ms;
 	animation-delay: 20ms;
-}
+}*/
 .cuadroserv p {
 	display: block;
-	height: 0px;
-	opacity: 0;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
 }
 .txt_open {
 	opacity: 1; 
@@ -348,7 +343,9 @@ section {
 }
 
 /*seccion portfolio*/
-
+h4 {
+	font-family: 'Open Sans';
+}
 .sinbullet {
 	list-style: none;
 }
@@ -357,6 +354,7 @@ section {
 }
 #applications {
 	margin: 0;
+	height: 600px !important;
 }
 
 #applications li {
@@ -367,9 +365,40 @@ section {
 #applications img {
 	width: 100%;
  }
+#applications li a {
+	position: relative;
+}
+.trabj {
+	position: relative;
+}
+.nombre {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	/*padding: 35% 35%;*/
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+} 
+.nombre h4, 
+.nombre a {
+	color: #fff; 
+	margin: 0;
+}
+.subttnmbr {
+	top: 20px;
+}
+.imgtrabj:hover .nombre, 
+.trabj:hover .nombre {
+	visibility: visible;
+	opacity: 1;
+}
  /* rollover item trabajos */
  
- .grises img {
+ .imgtrabj img {
 	filter: url('#grayscale'); /* Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
@@ -377,20 +406,18 @@ section {
 	-o-filter: grayscale(100%);
 	filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
 	filter: Gray(); /* IE4-8 and 9 */
-
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
-.grises img:hover { 
+.imgtrabj img:hover { 
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
 	-ms-filter: grayscale(0%);
 	-o-filter: grayscale(0%);
 	filter: none;
-
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;

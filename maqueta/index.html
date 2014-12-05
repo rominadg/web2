@@ -21,7 +21,7 @@
 				<div class="item-section">
 					<h2>¿QUIÉN SOY?</h2>
 					<hr>
-					<p><a class="masinfo quiensoy" href="#"></a></p>
+					<p><a class="masinfo" href="./secciones_scroll.html#section-1">+ info</a></p>
 				</div>
 			</div>
 			<div class="large-3 columns imgprueba">
@@ -32,7 +32,7 @@
 				<div class="item-section">
 					<h2>¿QUÉ HAGO?</h2>
 					<hr>
-					<p><a class="masinfo quehago" href="#"></a></p>
+					<p><a class="masinfo" href="./secciones_scroll.html#section-2">+ info</a></p>
 				</div>				
 			</div>
 			<div class="large-3 columns imgprueba">
@@ -43,7 +43,7 @@
 				<div class="item-section">
 					<h2>PORTFOLIO</h2>
 					<hr>
-					<p><a class="masinfo portfolio" href="#"></a></p>
+					<p><a class="masinfo" href="./secciones_scroll.html#section-3">+ info</a></p>
 				</div>	
 			</div>
 			<div class="large-3 columns imgprueba">
@@ -54,7 +54,7 @@
 				<div class="item-section">
 					<h2>CONTACTO</h2>
 					<hr>
-					<p><a class="masinfo contacto" href="#"></a></p>
+					<p><a class="masinfo" href="./secciones_scroll.html#section-4">+ info</a></p>
 				</div>			
 			</div>
 		</div>
@@ -81,14 +81,12 @@
 	<script>
     $(document).ready(function(){
         $('.item-section').hover(function(e){
-            console.log("entro hijo"); 
             var elemZoom = $(this).siblings('.zoom');
             $(elemZoom).css("-webkit-transform", "scale(1.2, 1.2)");
             $(elemZoom).find('.back-hover')
                 .css("background-color","rgba(102,153,51,0.5)");
             e.stopPropagation();
         }, function(e){
-            console.log("salio hijo"); 
             var elemZoom = $(this).siblings('.zoom');
             $(elemZoom).css("-webkit-transform", "scale(1, 1)");
             $(elemZoom).find('.back-hover')
@@ -97,14 +95,12 @@
         });
 
         $('.zoom').hover(function(e){
-            console.log("entro"); 
             var elemZoom = $(this);
             $(elemZoom).css("-webkit-transform", "scale(1.2, 1.2)");
             $(elemZoom).find('.back-hover')
-                .css("background-color","rgba(102,153,51,0.5)");
+              .css("background-color","rgba(102,153,51,0.5)");
             e.stopPropagation();
         }, function(e){
-            console.log("salio"); 
             var elemZoom = $(this);
             $(elemZoom).css("-webkit-transform", "scale(1, 1)");
             $(elemZoom).find('.back-hover')

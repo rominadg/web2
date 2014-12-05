@@ -49,7 +49,7 @@
 <!-- contenido de seccion perfil -->	
 	<a name="perfil"></a>
 	<section  id="section-1" class="row">
-    <a href="./ctrabajoparte" class="page">Rustico</a>
+    <!-- <a href="./ctrabajoparte" class="page">Rustico</a> -->
 		<div class="large-12 columns">
 			<h2  data-magellan-destination="perfil" class="ttseccion">SOY</h2>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -64,15 +64,15 @@
 			<h2  data-magellan-destination="perfil" class="ttseccion">CREO</h2>
 			<div class="large-4 columns cuadroserv">
 				<h3>ESTO</h3>
-				<p class="parrafo02 animation_jump">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p class="parrafo02">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 			</div>
 			<div class="large-4 columns cuadroserv">
 				<h3>LO OTRO</h3>
-				<p class="parrafo02 animation_jump">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p class="parrafo02">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 			</div>
 			<div class="large-4 columns cuadroserv">
 				<h3>Y ESO TAMBIÉN</h3>
-				<p class="parrafo02 animation_jump">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<p class="parrafo02">Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 			</div>
 		</div>
 	</section>
@@ -99,9 +99,7 @@
                  }
                 
                  .orbit-container {
-                    border: 1px solid red;
-                     height: 100px;
-                    
+                    height: 100px;                    
                  }
                  .orbit-container p {
                     height: 100px;
@@ -147,11 +145,6 @@
 		</div>
 	</section>
 <!-- contenido de seccion portfolio -->	
-    <style>
-    #applications {
-        height: 600px !important;
-    }      
-    </style>
 	<a name="portfolio"></a>
 		<section  id="section-3" class="row" style="padding-top:0px;">
 			<div class="large-12 columns">
@@ -167,10 +160,16 @@
 				</div>
 			</div>
 		</section>
-		<section style="padding-top:0px; background:#c9c9c9;">		
+		<section style="padding-top:0px;">		
 			<ul id="applications" class="grises">
-				<li data-id="id-1" data-type="ident">
-					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
+				<li class="trabj" data-id="id-1" data-type="ident">
+					<div class="imgtrabj">
+						<img src="./img/portfolio1.jpg" alt="trabajo1">
+					</div>
+					<div class="nombre">
+						<h4 class="">trabajo01</h4>
+						<a href="./ctrabajoparte" class="page">ver +</a>
+					</div>
 				</li>
 				<li data-id="id-2" data-type="grafica">
 					<a href="#"><img src="./img/portfolio1.jpg" alt="trabajo1"></a>
@@ -303,6 +302,37 @@
 </script>	
 <div id="pageslide" style="display:none"></div>
 <style>
+<script>
+    $(document).ready(function(){
+        $('.nombre').hover(function(e){
+            var elemcolor = $(this).siblings('.imgtrabj');
+            $(elemcolor).css("-webkit-filter", "grayscale(100%)");
+            $(elemcolor).find('.nombre')
+                .css("opacity","0");
+            e.stopPropagation();
+        }, function(e){
+            var elemcolor = $(this).siblings('.imgtrabj');
+            $(elemcolor).css("-webkit-filter", "grayscale(0%)");
+            $(elemcolor).find('.nombre')
+                .css("opacity","1");
+            e.stopPropagation();
+        });
+
+    $('.nombre').hover(function(e){
+            var elemcolor = $(this);
+            $(elemcolor).css("-webkit-filter", "grayscale(100%)");
+            $(elemcolor).find('.imgtrabj')
+              .css("opacity","0");
+            e.stopPropagation();
+        }, function(e){
+            var elemcolor = $(this);
+            $(elemcolor).css("-webkit-filter", "grayscale(0%)");
+            $(elemcolor).find('.imgtrabj')
+                .css("opacity","1");
+            e.stopPropagation();
+        });
+     });
+	</script>
 /* #Page Slide
 ================================================== */
 #pageslide {
