@@ -55,7 +55,7 @@ h3 {
 .buttonred {
 	clear: both;
 	background-color: #693;
-	height: 46px;
+	height: 54px;
 }
 li.buttonred:hover {
 	background-color: rgb(23, 102, 39);
@@ -172,6 +172,9 @@ li.buttonred:hover {
 	margin: 0 auto; 
 	color: white; 
 }
+.masinfo:hover, .masinfo:focus {
+	color: #b0cb1f;
+}
 .quiensoy {
 	background: url('../img/isomasinfo.png') 0 0;
 }
@@ -210,14 +213,14 @@ textarea.text.textarea {
 	background-color: #693;
 	padding: 30px;
 	z-index: -2;
-	height: 100%;
+	/*height: 100%;*/
 }
 .datosdgrr {
 	color: #fff;
 	padding-top: 50%;
 }
 .pdng {
-	margin: 30px 0 0;
+	margin: 15px 0 0;
 }
 .redpie {
 	opacity: 0.5; 
@@ -230,7 +233,7 @@ p {
 	margin-bottom: 5px; 
 }
 .logotop  img{
-	padding-top: 20px;
+	padding-top: 6px;
 	width: 200px;
 }
 .fdoheaderscc {
@@ -239,7 +242,7 @@ p {
 }
 .navseccion {
 	padding-left: 14px;
-	background-color: rgba(222,222,220,1);
+	background-color: rgba(255, 255, 255, 0.8);
 }
 .ttseccion {
 	font-size: 2rem;
@@ -264,9 +267,9 @@ p {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	display: inline-block;
-	padding-top: 33px;
+	padding-top: 44px;
 	padding-right: 50px;
-	padding-bottom: 36px;
+	padding-bottom: 40px;
 	padding-left: 50px;
 	font-size: 1rem;
 	background-color:  rgba(222,222,220,0);
@@ -314,9 +317,12 @@ section {
 .service {
 	display: table;
 }
+.cuadroserv02 {
+	border-right: none!important;
+}
 .cuadroserv {
 	padding-top: 25px;
-	height: 200px;
+	height: 260px;
 	display: table-cell;
 	border-right: 1px #ccc solid;
 	vertical-align: middle; 
@@ -376,9 +382,10 @@ h4 {
 }
 .nombre {
 	position: absolute;
-	top: 0;
+	bottom: 15%;
+	left: 48%;
 	z-index: 10;
-	padding: 35% 35%;
+	/*padding: 35% 35%;*/
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: all 0.6s ease;
