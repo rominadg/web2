@@ -393,9 +393,8 @@ h4 {
 	-o-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 } 
-.nombre h4, 
 .nombre a {
-	color: #fff; 
+	color: #c3d14b; 
 	margin: 0;
 }
 .subttnmbr {
